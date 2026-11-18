@@ -1,5 +1,5 @@
 package Events
 
-class Event {
-    fun getDescription(): String = TODO("Implement the event description")
+interface Event {
+    fun getDescription(): String
 }
