@@ -35,7 +35,10 @@ class Player(
 
     fun isKnockedOut(): Boolean = currentHp == MIN_HP
 
-    fun isAtMaxLevel(): Boolean = level >= MAX_LEVEL
+    fun isAtMaxLevel(): Boolean {
+        assert(level > 0 && level <= MAX_LEVEL) { "Invalid level: $level" }
+        return level >= MAX_LEVEL
+    }
 
 
     fun winEncounter(loot: Int) {
