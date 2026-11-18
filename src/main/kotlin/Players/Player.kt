@@ -1,15 +1,29 @@
 package Players
 
-class Player {
-    fun getDescription(): String = TODO("Implement the player description")
+private const val STARTING_LEVEL = 1
+private const val STARTING_FORCE = 5
 
-    fun getName(): String = TODO("Implement the player name")
+class Player(
+    private val name: String,
+    private val job: Job,
+    private val personality: Personality,
+) {
+    private var level: Int = STARTING_LEVEL
+    private var force: Int = STARTING_FORCE
+    private val maxHp: Int = job.maxHp
+    private var currentHp: Int = maxHp
+    private var coins: Int = job.startingCoins
 
-    fun getLevel(): Int = TODO("Implement the player level")
+    fun getName(): String = name
 
-    fun getForce(): Int = TODO("Implement the player force")
+    fun getLevel(): Int = level
 
-    fun getHealthPoints(): Int = TODO("Implement the player health points")
+    fun getForce(): Int = force
 
-    fun getCoins(): Int = TODO("Implement the player coins")
+    fun getHealthPoints(): Int = currentHp
+
+    fun getCoins(): Int = coins
+
+    fun getDescription(): String =
+        "$name, ${job.jobName} with ${personality.personalityName} character (level $level, force $force)"
 }
