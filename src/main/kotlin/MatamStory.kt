@@ -1,10 +1,18 @@
+import Events.parseEvents
 import Players.Player
 import java.io.Reader
+import Events.Event
+import Events.parseEvents
 
 class MatamStory(eventsReader: Reader, playersReader: Reader) {
     private var turnIndex: Int = 1
+    private val events: List<Event> = parseEvents(eventsReader)
+
 
     init {
+        for (event: Event in events) {
+            println(event.getDescription())
+        }
         // TODO: Read and validate all events from eventsReader.
         // TODO: Read and validate all players from playersReader.
         // Add the state needed by your design.
@@ -28,7 +36,7 @@ class MatamStory(eventsReader: Reader, playersReader: Reader) {
         printBarrier()
     }
 
-    private fun isGameOver(): Boolean = TODO("Implement the game over condition")
+    private fun isGameOver(): Boolean = true //TODO("Implement the game over condition")
 
     /** Plays the entire game. The provided flow is a suggested implementation outline. */
     fun play() {
