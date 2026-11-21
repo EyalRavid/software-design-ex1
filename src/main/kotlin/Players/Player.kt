@@ -1,4 +1,6 @@
 package Players
+import Events.Event
+import java.io.Reader
 
 private const val STARTING_LEVEL = 1
 private const val STARTING_FORCE = 5
@@ -90,3 +92,54 @@ class Player(
     }
 
 }
+
+fun parsePlayers(playersReader: Reader): MutableList<Player> {
+    val playerInputList: List<String> =
+        playersReader.readLines().asSequence().flatMap { line: String -> line.split(" ", "\t").asSequence() }
+            .filter { word: String -> word.isNotEmpty() }.toList()
+    if (playerInputList.size !in 6..18 || playerInputList.size % 3 != 0) throw IllegalArgumentException("Invalid Players File")
+    val playerChunkList : List<List<String>> = playerInputList.chunked(3)
+    val iterator: Iterator<List<String>> = playerChunkList.iterator()
+    val playersList: MutableList<Player> = mutableListOf()
+    while (iterator.hasNext()) {
+        val nextPlayer : Player = readNextPlayer(iterator)
+        playersList.add(nextPlayer)
+    }
+
+    if (playersList.size !in 2..6) throw IllegalArgumentException("Invalid Players File")
+    if (playersList.map { player: Player -> player.getName() }.toSet().size != playersList.size) {
+        throw IllegalArgumentException("Invalid Players File")
+    }
+    return playersList
+}
+
+private fun readNextPlayer(iterator: Iterator<List<String>>) : Player {
+    if (!iterator.hasNext()) {
+        throw IllegalArgumentException("Invalid Players File")
+    }
+    val playerInfo : List<String> = iterator.next()
+    assert(playerInfo.size == 3) { "Invalid Players File" }
+    val (name: String, jobStr:String, characterTypeStr: String) = playerInfo
+    if (jobStr !in listOf("Warrior", "Archer", "Magician")) {
+        throw IllegalArgumentException("Invalid Players File")
+    }
+    if (name.length !in 3..15 || !name.all { ch: Char -> ch in 'a'..'z' || ch in 'A'..'Z' }) {
+        throw IllegalArgumentException("Invalid Players File")
+    }
+    if (characterTypeStr !in listOf("Responsible", "RiskTaking")) {
+        throw IllegalArgumentException("Invalid Players File")
+    }
+    val job: Job = when(jobStr){
+        "Warrior" -> Warrior
+        "Archer" -> Archer
+        "Magician" -> Magician
+        else -> throw IllegalArgumentException("Invalid Players File")
+    }
+    val personality: Personality = when(characterTypeStr){
+        "Responsible" -> Responsible
+        "RiskTaking" -> RiskTaking
+        else -> throw IllegalArgumentException("Invalid Players File")
+    }
+    return Player(name=name,job=job, personality = personality)
+}
+
