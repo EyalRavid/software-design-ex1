@@ -1,9 +1,11 @@
 package Events
+import Players.Player
 
 import java.io.Reader
 
 interface Event {
     fun getDescription(): String
+    fun play(player: Player): String
 }
 
 
