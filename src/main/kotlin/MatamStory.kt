@@ -1,22 +1,13 @@
-import Events.parseEvents
-import Players.Player
-import java.io.Reader
 import Events.Event
 import Events.parseEvents
+import Players.Player
+import Players.parsePlayers
+import java.io.Reader
 
 class MatamStory(eventsReader: Reader, playersReader: Reader) {
     private var turnIndex: Int = 1
     private val events: List<Event> = parseEvents(eventsReader)
-
-
-    init {
-        for (event: Event in events) {
-            println(event.getDescription())
-        }
-        // TODO: Read and validate all events from eventsReader.
-        // TODO: Read and validate all players from playersReader.
-        // Add the state needed by your design.
-    }
+    private val players: List<Player> = parsePlayers(playersReader)
 
     private fun playTurn(player: Player) {
         // TODO:
@@ -29,10 +20,19 @@ class MatamStory(eventsReader: Reader, playersReader: Reader) {
 
     private fun playRound() {
         printRoundStart()
-        // TODO: Play a turn for each active player.
+        for (player: Player in players) {
+            if (!player.isKnockedOut()) {
+                playTurn(player)
+            }
+        }
         printRoundEnd()
         printLeaderBoardMessage()
-        // TODO: Print each leaderboard entry using printLeaderBoardEntry.
+        val ranking: List<Player> = players.sortedWith(
+            compareByDescending<Player> { player: Player -> player.getLevel() }
+                .thenByDescending { player: Player -> player.getCoins() }
+                .thenBy { player: Player -> player.getName() }
+        )
+        ranking.forEachIndexed { index: Int, player: Player -> printLeaderBoardEntry(index + 1, player) }
         printBarrier()
     }
 
@@ -41,7 +41,7 @@ class MatamStory(eventsReader: Reader, playersReader: Reader) {
     /** Plays the entire game. The provided flow is a suggested implementation outline. */
     fun play() {
         printStartMessage()
-        // TODO: Print each player using printStartPlayerEntry, in input order.
+        players.forEachIndexed { index: Int, player: Player -> printStartPlayerEntry(index + 1, player) }
         printBarrier()
 
         while (!isGameOver()) {
