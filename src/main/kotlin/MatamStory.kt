@@ -1,47 +1,66 @@
-import Events.parseEvents
-import Players.Player
-import java.io.Reader
 import Events.Event
 import Events.parseEvents
+import Players.Player
+import Players.parsePlayers
+import Utilities.*
+import java.io.Reader
 
 class MatamStory(eventsReader: Reader, playersReader: Reader) {
     private var turnIndex: Int = 1
     private val events: List<Event> = parseEvents(eventsReader)
-
-
-    init {
-        for (event: Event in events) {
-            println(event.getDescription())
-        }
-        // TODO: Read and validate all events from eventsReader.
-        // TODO: Read and validate all players from playersReader.
-        // Add the state needed by your design.
-    }
+    private val players: List<Player> = parsePlayers(playersReader)
 
     private fun playTurn(player: Player) {
-        // TODO:
-        // 1. Get the next event from the events list.
-        // 2. Print the turn details using printTurnDetails.
-        // 3. Play the event.
-        // 4. Print the turn outcome using printTurnOutcome.
+        val event = events[(turnIndex - 1) % events.size]
+        printTurnDetails(index = turnIndex, player = player, event = event)
+        val outcome: String = event.play(player)
+        printTurnOutcome(outcome = outcome)
         turnIndex++
     }
 
     private fun playRound() {
         printRoundStart()
-        // TODO: Play a turn for each active player.
+        for (player: Player in players) {
+            if (!player.isKnockedOut()) {
+                playTurn(player)
+            }
+        }
         printRoundEnd()
         printLeaderBoardMessage()
-        // TODO: Print each leaderboard entry using printLeaderBoardEntry.
+        val ranking: List<Player> = players.sortedWith(
+            compareByDescending<Player> { player: Player -> player.getLevel() }
+                .thenByDescending { player: Player -> player.getCoins() }
+                .thenBy { player: Player -> player.getName() }
+        )
+        ranking.forEachIndexed { index: Int, player: Player -> printLeaderBoardEntry(index + 1, player) }
         printBarrier()
     }
 
-    private fun isGameOver(): Boolean = true //TODO("Implement the game over condition")
+    private fun thereIsWinner(): Boolean {
+        for (player in players) {
+            if (player.isAtMaxLevel()) {
+                return true
+            }
+        }
+        return false
+    }
+
+    private fun allKnockedOut(): Boolean {
+        if (players.all { player: Player -> player.isKnockedOut() }) {
+            return true
+        }
+        return false
+    }
+
+
+    private fun isGameOver(): Boolean {
+        return allKnockedOut() || thereIsWinner()
+    }
 
     /** Plays the entire game. The provided flow is a suggested implementation outline. */
     fun play() {
         printStartMessage()
-        // TODO: Print each player using printStartPlayerEntry, in input order.
+        players.forEachIndexed { index: Int, player: Player -> printStartPlayerEntry(index + 1, player) }
         printBarrier()
 
         while (!isGameOver()) {
@@ -49,6 +68,16 @@ class MatamStory(eventsReader: Reader, playersReader: Reader) {
         }
 
         printGameOver()
-        // TODO: Print either the winner using printWinner or no winner using printNoWinners.
+        if (thereIsWinner()) {
+            val ranking: List<Player> = players.sortedWith(
+                compareByDescending<Player> { player: Player -> player.getLevel() }
+                    .thenByDescending { player: Player -> player.getCoins() }
+                    .thenBy { player: Player -> player.getName() }
+            )
+            printWinner(player = ranking[0])
+        }
+        else {
+            printNoWinners()
+        }
     }
 }

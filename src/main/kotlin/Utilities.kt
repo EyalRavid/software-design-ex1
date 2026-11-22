@@ -1,3 +1,5 @@
+package Utilities
+
 import Events.Event
 import Players.Player
 

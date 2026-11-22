@@ -1,5 +1,9 @@
 package Events
 
+import Players.Player
+import Utilities.getEncounterLostMessage
+import Utilities.getEncounterWonMessage
+
 abstract class Monster : Event {
     abstract val combatPower: Int
     abstract val loot: Int
@@ -7,6 +11,18 @@ abstract class Monster : Event {
     abstract val size: Int
 
     open fun afterEncounter() {}
+
+    override fun play(player: Player): String {
+        val message: String = if (player.combatPower() > combatPower) {
+            player.winEncounter(loot)
+            getEncounterWonMessage(player, loot)
+        } else {
+            player.loseEncounter(damage)
+            getEncounterLostMessage(player, damage)
+        }
+        afterEncounter()
+        return message
+    }
 }
 
 class Snail : Monster() {
@@ -16,7 +32,7 @@ class Snail : Monster() {
     override val size: Int = 1
 
     override fun getDescription(): String {
-        return "Snail (Power $combatPower, Loot $loot, Damage $damage)"
+        return "Snail (power $combatPower, loot $loot, damage $damage)"
     }
 }
 
@@ -27,7 +43,7 @@ class Slime : Monster() {
     override val size: Int = 1
 
     override fun getDescription(): String {
-        return "Slime (Power $combatPower, Loot $loot, Damage $damage)"
+        return "Slime (power $combatPower, loot $loot, damage $damage)"
     }
 }
 
@@ -42,7 +58,7 @@ class Balrog : Monster() {
     }
 
     override fun getDescription(): String {
-        return "Balrog (Power $combatPower, Loot $loot, Damage $damage)"
+        return "Balrog (power $combatPower, loot $loot, damage $damage)"
     }
 }
 
@@ -64,6 +80,6 @@ class Pack(private val monsters: List<Monster>) : Monster() {
     }
 
     override fun getDescription(): String {
-        return "Pack of $size members (Power $combatPower, Loot $loot, Damage $damage)"
+        return "Pack of $size members (power $combatPower, loot $loot, damage $damage)"
     }
 }
