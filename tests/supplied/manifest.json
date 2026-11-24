@@ -1,0 +1,33 @@
+{
+  "name": "Public sanity tests",
+  "execution_timeout": 10,
+  "tests": [
+    {
+      "id": "supplied_1",
+      "group": "supplied",
+      "events": "supplied/test1.events",
+      "players": "supplied/test1.players",
+      "expected": "supplied/test1.expected",
+      "expected_exit_code": 0,
+      "points": 33.33
+    },
+    {
+      "id": "supplied_2",
+      "group": "supplied",
+      "events": "supplied/test2.events",
+      "players": "supplied/test2.players",
+      "expected": "supplied/test2.expected",
+      "expected_exit_code": 1,
+      "points": 33.33
+    },
+    {
+      "id": "supplied_3",
+      "group": "supplied",
+      "events": "supplied/test3.events",
+      "players": "supplied/test3.players",
+      "expected": "supplied/test3.expected",
+      "expected_exit_code": 1,
+      "points": 33.34
+    }
+  ]
+}

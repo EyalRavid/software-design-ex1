@@ -1,0 +1,249 @@
+{
+  "name": "Public sanity tests",
+  "execution_timeout": 10,
+  "tests": [
+    {
+      "id": "supplied_1",
+      "group": "supplied",
+      "events": "supplied/test1.events",
+      "players": "supplied/test1.players",
+      "expected": "supplied/test1.expected",
+      "expected_exit_code": 0,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_2",
+      "group": "supplied",
+      "events": "supplied/test2.events",
+      "players": "supplied/test2.players",
+      "expected": "supplied/test2.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_3",
+      "group": "supplied",
+      "events": "supplied/test3.events",
+      "players": "supplied/test3.players",
+      "expected": "supplied/test3.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_4",
+      "group": "supplied",
+      "events": "supplied/test4.events",
+      "players": "supplied/test4.players",
+      "expected": "supplied/test4.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_5",
+      "group": "supplied",
+      "events": "supplied/test5.events",
+      "players": "supplied/test5.players",
+      "expected": "supplied/test5.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_6",
+      "group": "supplied",
+      "events": "supplied/test6.events",
+      "players": "supplied/test6.players",
+      "expected": "supplied/test6.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_7",
+      "group": "supplied",
+      "events": "supplied/test7.events",
+      "players": "supplied/test7.players",
+      "expected": "supplied/test7.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_8",
+      "group": "supplied",
+      "events": "supplied/test8.events",
+      "players": "supplied/test8.players",
+      "expected": "supplied/test8.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_9",
+      "group": "supplied",
+      "events": "supplied/test9.events",
+      "players": "supplied/test9.players",
+      "expected": "supplied/test9.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_10",
+      "group": "supplied",
+      "events": "supplied/test10.events",
+      "players": "supplied/test10.players",
+      "expected": "supplied/test10.expected",
+      "expected_exit_code": 0,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_11",
+      "group": "supplied",
+      "events": "supplied/test11.events",
+      "players": "supplied/test11.players",
+      "expected": "supplied/test11.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_12",
+      "group": "supplied",
+      "events": "supplied/test12.events",
+      "players": "supplied/test12.players",
+      "expected": "supplied/test12.expected",
+      "expected_exit_code": 0,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_13",
+      "group": "supplied",
+      "events": "supplied/test13.events",
+      "players": "supplied/test13.players",
+      "expected": "supplied/test13.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_14",
+      "group": "supplied",
+      "events": "supplied/test14.events",
+      "players": "supplied/test14.players",
+      "expected": "supplied/test14.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_15",
+      "group": "supplied",
+      "events": "supplied/test15.events",
+      "players": "supplied/test15.players",
+      "expected": "supplied/test15.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_16",
+      "group": "supplied",
+      "events": "supplied/test16.events",
+      "players": "supplied/test16.players",
+      "expected": "supplied/test16.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_17",
+      "group": "supplied",
+      "events": "supplied/test17.events",
+      "players": "supplied/test17.players",
+      "expected": "supplied/test17.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_18",
+      "group": "supplied",
+      "events": "supplied/test18.events",
+      "players": "supplied/test18.players",
+      "expected": "supplied/test18.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_19",
+      "group": "supplied",
+      "events": "supplied/test19.events",
+      "players": "supplied/test19.players",
+      "expected": "supplied/test19.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_20",
+      "group": "supplied",
+      "events": "supplied/test20.events",
+      "players": "supplied/test20.players",
+      "expected": "supplied/test20.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_21",
+      "group": "supplied",
+      "events": "supplied/test21.events",
+      "players": "supplied/test21.players",
+      "expected": "supplied/test21.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_22",
+      "group": "supplied",
+      "events": "supplied/test22.events",
+      "players": "supplied/test22.players",
+      "expected": "supplied/test22.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_23",
+      "group": "supplied",
+      "events": "supplied/test23.events",
+      "players": "supplied/test23.players",
+      "expected": "supplied/test23.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_24",
+      "group": "supplied",
+      "events": "supplied/test24.events",
+      "players": "supplied/test24.players",
+      "expected": "supplied/test24.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_25",
+      "group": "supplied",
+      "events": "supplied/test25.events",
+      "players": "supplied/test25.players",
+      "expected": "supplied/test25.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_26",
+      "group": "supplied",
+      "events": "supplied/test26.events",
+      "players": "supplied/test26.players",
+      "expected": "supplied/test26.expected",
+      "expected_exit_code": 1,
+      "points": 3.7
+    },
+    {
+      "id": "supplied_27",
+      "group": "supplied",
+      "events": "supplied/test27.events",
+      "players": "supplied/test27.players",
+      "expected": "supplied/test27.expected",
+      "expected_exit_code": 0,
+      "points": 3.8
+    }
+  ]
+}
