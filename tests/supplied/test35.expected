@@ -1,0 +1,61 @@
+Game is about to start!
+These are the players:
+
+1. Guy, Warrior with Responsible character (level 1, force 5)
+2. Shir, Magician with RiskTaking character (level 1, force 5)
+
+----------------------------------------
+
+New round starts!
+
+Turn: 1
+Player: Guy, Warrior with Responsible character (level 1, force 5)
+Event: Snail (power 5, loot 2, damage 10)
+Guy won the encounter, gained 2 coins and leveled up!
+
+Turn: 2
+Player: Shir, Magician with RiskTaking character (level 1, force 5)
+Event: Balrog (power 15, loot 100, damage 9001)
+Shir lost the encounter and took 9001 damage!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          Guy             2         5     140   12
+2          Shir            1         5     0     10
+
+----------------------------------------
+
+New round starts!
+
+Turn: 3
+Player: Guy, Warrior with Responsible character (level 2, force 5)
+Event: Slime (power 12, loot 5, damage 25)
+Guy lost the encounter and took 25 damage!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          Guy             2         5     115   12
+2          Shir            1         5     0     10
+
+----------------------------------------
+
+New round starts!
+
+Turn: 4
+Player: Guy, Warrior with Responsible character (level 2, force 5)
+Event: Balrog (power 15, loot 100, damage 9001)
+Guy lost the encounter and took 9001 damage!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          Guy             2         5     0     12
+2          Shir            1         5     0     10
+
+----------------------------------------
+
+Game is over!
+There are no winners in this game.
+Better luck next time!

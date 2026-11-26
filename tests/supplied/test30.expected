@@ -1,0 +1,61 @@
+Game is about to start!
+These are the players:
+
+1. Bob, Archer with Responsible character (level 1, force 5)
+2. Alice, Archer with RiskTaking character (level 1, force 5)
+
+----------------------------------------
+
+New round starts!
+
+Turn: 1
+Player: Bob, Archer with Responsible character (level 1, force 5)
+Event: Pack of 3 members (power 25, loot 104, damage 9021)
+Bob lost the encounter and took 9021 damage!
+
+Turn: 2
+Player: Alice, Archer with RiskTaking character (level 1, force 5)
+Event: PotionsMerchant
+Alice bought 0 potions!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          Alice           1         5     100   20
+2          Bob             1         5     0     20
+
+----------------------------------------
+
+New round starts!
+
+Turn: 3
+Player: Alice, Archer with RiskTaking character (level 1, force 5)
+Event: Snail (power 5, loot 2, damage 10)
+Alice won the encounter, gained 2 coins and leveled up!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          Alice           2         5     100   22
+2          Bob             1         5     0     20
+
+----------------------------------------
+
+New round starts!
+
+Turn: 4
+Player: Alice, Archer with RiskTaking character (level 2, force 5)
+Event: Pack of 3 members (power 27, loot 104, damage 9021)
+Alice lost the encounter and took 9021 damage!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          Alice           2         5     0     22
+2          Bob             1         5     0     20
+
+----------------------------------------
+
+Game is over!
+There are no winners in this game.
+Better luck next time!
