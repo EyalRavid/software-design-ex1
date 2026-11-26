@@ -1,0 +1,61 @@
+Game is about to start!
+These are the players:
+
+1. Nadav, Archer with Responsible character (level 1, force 5)
+2. Yael, Magician with RiskTaking character (level 1, force 5)
+
+----------------------------------------
+
+New round starts!
+
+Turn: 1
+Player: Nadav, Archer with Responsible character (level 1, force 5)
+Event: Slime (power 12, loot 5, damage 25)
+Nadav lost the encounter and took 25 damage!
+
+Turn: 2
+Player: Yael, Magician with RiskTaking character (level 1, force 5)
+Event: Balrog (power 15, loot 100, damage 9001)
+Yael lost the encounter and took 9001 damage!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          Nadav           1         5     75    20
+2          Yael            1         5     0     10
+
+----------------------------------------
+
+New round starts!
+
+Turn: 3
+Player: Nadav, Archer with Responsible character (level 1, force 5)
+Event: PotionsMerchant
+Nadav bought 3 potions!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          Yael            1         5     0     10
+2          Nadav           1         5     100   5
+
+----------------------------------------
+
+New round starts!
+
+Turn: 4
+Player: Nadav, Archer with Responsible character (level 1, force 5)
+Event: Balrog (power 15, loot 100, damage 9001)
+Nadav lost the encounter and took 9001 damage!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          Yael            1         5     0     10
+2          Nadav           1         5     0     5
+
+----------------------------------------
+
+Game is over!
+There are no winners in this game.
+Better luck next time!

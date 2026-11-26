@@ -1,0 +1,46 @@
+Game is about to start!
+These are the players:
+
+1. Ron, Warrior with Responsible character (level 1, force 5)
+2. Eden, Magician with RiskTaking character (level 1, force 5)
+
+----------------------------------------
+
+New round starts!
+
+Turn: 1
+Player: Ron, Warrior with Responsible character (level 1, force 5)
+Event: Pack of 7 members (power 70, loot 29, damage 145)
+Ron lost the encounter and took 145 damage!
+
+Turn: 2
+Player: Eden, Magician with RiskTaking character (level 1, force 5)
+Event: Balrog (power 15, loot 100, damage 9001)
+Eden lost the encounter and took 9001 damage!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          Eden            1         5     0     10
+2          Ron             1         5     5     10
+
+----------------------------------------
+
+New round starts!
+
+Turn: 3
+Player: Ron, Warrior with Responsible character (level 1, force 5)
+Event: Snail (power 5, loot 2, damage 10)
+Ron won the encounter, gained 2 coins and leveled up!
+
+Round has ended!
+Leader board is as follows:
+Ranking    Player Name     Level     Force HP    Coins
+1          Ron             2         5     0     12
+2          Eden            1         5     0     10
+
+----------------------------------------
+
+Game is over!
+There are no winners in this game.
+Better luck next time!
